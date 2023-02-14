@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #370653;
+}
+
+#IntiLogo{
+    width: 20rem;
+    margin: auto;
+    padding: auto;
+}
+
+.bi{
+    color: aliceblue;
+    font-size: 2.5rem;
+}
+
+.bi:hover{
+    color: aqua;
+}
+
+nav div:last-child a{
+    margin: 8px;
+}
+
+nav div:last-child a:last-child {
+    margin-left: 3px;
+}
