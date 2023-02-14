@@ -19,7 +19,7 @@ body{
 }
 
 .bi:hover{
-    color: aqua;
+    color: #bbe2c7;
 }
 
 nav div:last-child a{
@@ -28,4 +28,18 @@ nav div:last-child a{
 
 nav div:last-child a:last-child {
     margin-left: 3px;
+}
+
+#LogIn{
+    border-radius: 50px;
+        background: linear-gradient(45deg, #9ed6af, #bbffd0);
+        box-shadow: 35px -35px 70px #95caa5,
+            -35px 35px 70px #c9ffdf;
+}
+
+#LogIn:hover{
+    border-radius: 45px;
+        background: linear-gradient(45deg, #a8cbb3, #c8f2d5);
+        box-shadow: 15px -15px 30px #728a79,
+            -15px 15px 30px #ffffff;
 }
