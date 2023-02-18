@@ -1,10 +1,10 @@
-*{
-    margin:0;
-    padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
 
-body{
-    background-color: #370653;
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #IntiLogo{
@@ -38,8 +38,35 @@ nav div:last-child a:last-child {
 }
 
 #LogIn:hover{
-    border-radius: 45px;
+        border-radius: 45px;
         background: linear-gradient(45deg, #a8cbb3, #c8f2d5);
         box-shadow: 15px -15px 30px #728a79,
             -15px 15px 30px #ffffff;
 }
+
+.banner{
+    background-image: url("../img/Banner1.png");
+}
+
+.banner img{
+    margin-top: 3.5rem;
+    width: 10rem;
+}
+
+.bienvenida{
+    font-size: xx-large;
+    padding: 8rem 0rem;
+}
+
+.educacion{
+    margin-top: 3.5rem;
+}
+
+
+
+
+
+
+
+
+
