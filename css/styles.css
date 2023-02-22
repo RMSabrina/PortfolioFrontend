@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
 
+:root{
+    --fondo-uno: #201E21;
+    --iconos-hover: #bbe2c7;
+    --texto-claro: #F8F9FA;
+}
+
+
 *{
     margin:0 ;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: var(--fondo-uno) !important;
 }
 
 #IntiLogo{
@@ -19,7 +30,7 @@
 }
 
 .bi:hover{
-    color: #bbe2c7;
+    color: var(--iconos-hover) ;
 }
 
 nav div:last-child a{
@@ -58,9 +69,16 @@ nav div:last-child a:last-child {
     padding: 8rem 0rem;
 }
 
-.educacion{
+.educacionFormal{
     margin-top: 3.5rem;
+    color: var(--texto-claro);
 }
+
+.cursos{
+    color: var(--texto-claro);
+}
+
+
 
 
 
