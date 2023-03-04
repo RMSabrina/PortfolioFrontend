@@ -15,7 +15,44 @@
 }
 
 .fondoUno {
-  background-color: var(--fondo-uno) !important;
+  background: rgb(110, 48, 131);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(110, 48, 131, 1) 0%,
+    rgba(30, 18, 32, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(110, 48, 131, 1) 0%,
+    rgba(30, 18, 32, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(110, 48, 131, 1) 0%,
+    rgba(30, 18, 32, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6e3083",endColorstr="#1e1220",GradientType=1);
+  color: var(--texto-claro);
+}
+
+.fondoOne {
+  background: rgb(30, 18, 32);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(30, 18, 32, 1) 16%,
+    rgba(110, 48, 131, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(30, 18, 32, 1) 16%,
+    rgba(110, 48, 131, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(30, 18, 32, 1) 16%,
+    rgba(110, 48, 131, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1e1220",endColorstr="#6e3083",GradientType=1);
   color: var(--texto-claro);
 }
 
@@ -83,7 +120,25 @@ nav div:last-child a:last-child {
 }
 
 .habilidades {
-  background-color: var(--fondo-dos);
+  background: rgb(37, 205, 191);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(37, 205, 191, 1) 0%,
+    rgba(30, 18, 32, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(37, 205, 191, 1) 0%,
+    rgba(30, 18, 32, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(37, 205, 191, 1) 0%,
+    rgba(30, 18, 32, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25cdbf",endColorstr="#1e1220",GradientType=1);
+
+  padding-bottom: 8rem;
 }
 
 .habilidades svg {
@@ -97,5 +152,39 @@ nav div:last-child a:last-child {
   stroke-width: 15; /*Ancho del borde, le sumo 15px al radio*/
   transform: rotate(-90deg); /*Para que inicie en el eje vertical*/
   transform-origin: 50%; /*Para cambiar el eje de rotación*/
-  stroke-dasharray: var(--porcentaje) 100; /*Controla los rellenos y saltos, en porcentaje gracias a pathlength*/
+  stroke-dasharray: 100 100; /*Controla los rellenos y saltos, en porcentaje gracias a pathlength*/
+}
+
+.habilidades circle:nth-child(2) {
+  /*El segundo círculo es el que debe tener el color más intenso y el área del porcentaje*/
+  stroke-dasharray: var(--porcentaje) 100;
+  stroke: #ad10fc;
+}
+
+.skill {
+  position: relative;
+  display: flex; /*Para centrar los circulos de habilidades*/
+  justify-content: center;
+  align-items: center;
+}
+
+.skill span {
+  /*Para centrar los textos de cada grafico*/
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 20%;
+  right: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Estilo del texto*/
+  font-size: large !important;
+  color: var(--texto-claro);
+  font-weight: 500;
+}
+
+.habilidades img {
+  position: absolute;
+  top: 50%;
 }
