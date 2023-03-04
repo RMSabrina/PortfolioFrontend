@@ -1,90 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
 
-:root{
-    --fondo-uno: #201E21;
-    --iconos-hover: #bbe2c7;
-    --texto-claro: #F8F9FA;
+:root {
+  --fondo-uno: #201e21;
+  --iconos-hover: #bbe2c7;
+  --texto-claro: #f8f9fa;
+  --fondo-dos: #726777;
 }
 
-
-*{
-    margin:0 ;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: var(--fondo-uno) !important;
+.fondoUno {
+  background-color: var(--fondo-uno) !important;
+  color: var(--texto-claro);
 }
 
-#IntiLogo{
-    width: 20rem;
-    margin: auto;
-    padding: auto;
+#IntiLogo {
+  width: 20rem;
+  margin: auto;
+  padding: auto;
 }
 
-.bi{
-    color: aliceblue;
-    font-size: 2.5rem;
+.bi {
+  color: aliceblue;
+  font-size: 2.5rem;
 }
 
-.bi:hover{
-    color: var(--iconos-hover) ;
+.bi:hover {
+  color: var(--iconos-hover);
 }
 
-nav div:last-child a{
-    margin: 8px;
+nav div:last-child a {
+  margin: 8px;
 }
 
 nav div:last-child a:last-child {
-    margin-left: 3px;
+  margin-left: 3px;
 }
 
-#LogIn{
-    border-radius: 50px;
-        background: linear-gradient(45deg, #9ed6af, #bbffd0);
-        box-shadow: 35px -35px 70px #95caa5,
-            -35px 35px 70px #c9ffdf;
+#LogIn {
+  border-radius: 50px;
+  background: linear-gradient(45deg, #9ed6af, #bbffd0);
+  box-shadow: 35px -35px 70px #95caa5, -35px 35px 70px #c9ffdf;
 }
 
-#LogIn:hover{
-        border-radius: 45px;
-        background: linear-gradient(45deg, #a8cbb3, #c8f2d5);
-        box-shadow: 15px -15px 30px #728a79,
-            -15px 15px 30px #ffffff;
+#LogIn:hover {
+  border-radius: 45px;
+  background: linear-gradient(45deg, #a8cbb3, #c8f2d5);
+  box-shadow: 15px -15px 30px #728a79, -15px 15px 30px #ffffff;
 }
 
-.banner{
-    background-image: url("../img/Banner1.png");
+.banner {
+  background-image: url("../img/Banner1.png");
 }
 
-.banner img{
-    margin-top: 3.5rem;
-    width: 10rem;
+.banner img {
+  margin-top: 3.5rem;
+  width: 10rem;
 }
 
-.bienvenida{
-    font-size: xx-large;
-    padding: 8rem 0rem;
+.bienvenida {
+  font-size: xx-large;
+  padding: 8rem 0rem;
 }
 
-.educacionFormal{
-    margin-top: 3.5rem;
-    color: var(--texto-claro);
+.educacionFormal > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cursos{
-    color: var(--texto-claro);
+.cursos {
+  padding-bottom: 5rem;
 }
 
+.titulo {
+  font-weight: 500 !important;
+}
 
+.habilidades {
+  background-color: var(--fondo-dos);
+}
 
+.habilidades svg {
+  width: 175px;
+  height: 175px;
+}
 
-
-
-
-
-
-
-
+.habilidades circle {
+  fill: none; /*Relleno*/
+  stroke: #e8c7f8; /*Borde*/
+  stroke-width: 15; /*Ancho del borde, le sumo 15px al radio*/
+  transform: rotate(-90deg); /*Para que inicie en el eje vertical*/
+  transform-origin: 50%; /*Para cambiar el eje de rotación*/
+  stroke-dasharray: var(--porcentaje) 100; /*Controla los rellenos y saltos, en porcentaje gracias a pathlength*/
+}
