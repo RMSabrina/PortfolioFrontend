@@ -8,6 +8,10 @@
   --fondo-dos: #726777;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -119,6 +123,8 @@ nav div:last-child a:last-child {
   font-weight: 500 !important;
 }
 
+/*Sección de habilidades*/
+
 .habilidades {
   background: rgb(37, 205, 191);
   background: -moz-linear-gradient(
@@ -157,8 +163,15 @@ nav div:last-child a:last-child {
 
 .habilidades circle:nth-child(2) {
   /*El segundo círculo es el que debe tener el color más intenso y el área del porcentaje*/
-  stroke-dasharray: var(--porcentaje) 100;
+  stroke-dasharray: 0 100;
   stroke: #ad10fc;
+  animation: rellenar 0.35s linear forwards; /*forwards para que quede en el ultimo frame*/
+}
+
+@keyframes rellenar {
+  to {
+    stroke-dasharray: var(--porcentaje) 100;
+  }
 }
 
 .skill {
@@ -187,4 +200,131 @@ nav div:last-child a:last-child {
 .habilidades img {
   position: absolute;
   top: 50%;
+}
+
+/* Proyectos - Tarjetas*/
+
+.proyectos {
+  background: rgb(18, 32, 25);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(18, 32, 25, 1) 0%,
+    rgba(52, 233, 132, 1) 57%,
+    rgba(37, 205, 191, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(18, 32, 25, 1) 0%,
+    rgba(52, 233, 132, 1) 57%,
+    rgba(37, 205, 191, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(18, 32, 25, 1) 0%,
+    rgba(52, 233, 132, 1) 57%,
+    rgba(37, 205, 191, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#122019",endColorstr="#25cdbf",GradientType=1);
+
+  padding-bottom: 10rem;
+}
+
+.contenedorTarjeta {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /*Para mejorar la perspectiva de giro*/
+}
+
+.contenedorPadre {
+  margin: 20px; /*Para separar las tarjetas*/
+  perspective: 1000px;
+}
+
+.contenedorPadre:hover .tarjeta {
+  transform: rotateY(180deg);
+}
+
+.tarjeta {
+  width: 400px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 600ms; /*Para que gire un poco más lento y se note el giro*/
+}
+
+.tarjetaFrente {
+  background-size: cover;
+  background-position: center;
+}
+
+.tarjetaFrente,
+.tarjetaDorso {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden; /*Para que se oculte la cara trasera*/
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+.tarjetaDorso {
+  transform: rotateY(180deg);
+  background-color: white;
+}
+
+.cuerpoTarjetaFrente {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--texto-claro);
+  transform: translateZ(30px);
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.cuerpoTarjetaDorso {
+  padding: 40px;
+  text-align: center;
+  transform: translateZ(30px);
+}
+
+.cuerpoTarjetaDorso p {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.cuerpoTarjetaDorso input {
+  padding: 10px 40px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  color: var(--texto-claro);
+  background-color: #06b354;
+  box-shadow: 1px 1px 30px -5px #07853f;
+  border-radius: 10px;
+  transition: box-shadow 600ms;
+}
+
+.cuerpoTarjetaDorso input:hover {
+  box-shadow: 1px 1px 30px -5px #074422;
+}
+
+#tarjeta2 {
+  padding: 20px 30px;
 }
